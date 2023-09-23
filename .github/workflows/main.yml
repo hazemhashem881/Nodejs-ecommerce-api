@@ -14,8 +14,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14  # Update to Node.js version 14 or higher
-      - name: Install dependencies
-        run: yarn install --force
 
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@master
