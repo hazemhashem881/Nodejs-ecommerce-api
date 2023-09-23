@@ -2,7 +2,6 @@ name: Build
 on: push
 
 jobs:
- 
   sonarqube:
     name: SonarQube Scan
     runs-on: ubuntu-latest
@@ -12,12 +11,12 @@ jobs:
         with:
           fetch-depth: 0
       - name: Setup Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 14  # Update to Node.js version 14 or higher
       - name: Install dependencies
         run: yarn install --force
-     
+
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@master
         env:
