@@ -30,7 +30,7 @@ app.all('*',(req,res,next) => {
     // const err = new Error(`Can't find this route: ${req.originalUrl}`);
     // next(err.message)
     next(new ApiError(`Can't find this route: ${req.originalUrl}`, 400))
-});4
+});
 
 // Global error handling middleware
 app.use(globalError)
